@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Developer&#39;s Diary</title>
-    <description>A diary of a software developer as he sails through the vast sea of knowledge of ever changing technologies.  Passionate to learn he rights his learnings down to discover more and more...
+    <description>A diary of a software developer as he sails through the vast sea of knowledge of ever changing technologies.  Passionate to learn he rights his learnings down to discover more and more.
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 06 Jul 2015 00:37:22 +0530</pubDate>
-    <lastBuildDate>Mon, 06 Jul 2015 00:37:22 +0530</lastBuildDate>
+    <pubDate>Mon, 06 Jul 2015 22:06:06 +0530</pubDate>
+    <lastBuildDate>Mon, 06 Jul 2015 22:06:06 +0530</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -18,7 +18,7 @@
 &lt;p&gt;In case of one way binding only the values declared in the javascript are displayed on the browser page (DOM objects). While in two way data binding any change in the browser (DOM input controls) is automatically reflected in the javascript variable.&lt;/p&gt;
 
 &lt;h3 id=&quot;model-view-view-model-mvvw--mv--mvw&quot;&gt;Model View View Model (MVVW === MV* === MVW)&lt;/h3&gt;
-&lt;p&gt;In a Server end architecture MVC =&amp;gt; Model View Controller where model handels the data, the controller is responsible for the flow managment and the View is the presentation layer.
+&lt;p&gt;In a Server end architecture MVC =&amp;gt; Model View Controller where model handles the data, the controller is responsible for the flow management and the View is the presentation layer.
 In case of client end architecture there can be a need of massaging the data obtained in the Model thus creating a new Model for the view aka. View Model.
 The controller here does much more than managing the flow hence Model view Whatever (MVW). &lt;/p&gt;
 
@@ -40,37 +40,35 @@ The directive are used with ‘data’ prefixed to them as some browsers do not 
     &lt;tr&gt;
       &lt;th style=&quot;text-align: left&quot;&gt;Directive&lt;/th&gt;
       &lt;th style=&quot;text-align: left&quot;&gt;Description&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Javascript side maps to&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;ng-app&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Initializes the angular app within the tag it is added&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;angular.module(‘todoApp’,[])&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Initializes the angular app within the tag it is added.  &lt;strong&gt;Javascript side maps to:&lt;/strong&gt; &lt;code&gt;angular.module(&#39;todoApp&#39;,[])&lt;/code&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;ng-controller&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Makes scope objects available to the html.&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;angular.controller(‘TodoAppController’,function($scope){}&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Makes scope objects available to the html. &lt;strong&gt;Javascript side maps to:&lt;/strong&gt; &lt;code&gt;angular.controller(&#39;TodoAppController&#39;,function($scope){}&lt;/code&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;ng-repeat&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Looping through array&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Looping through array.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;ng-model&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Bind data to html.&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;ng-bind&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Use to avoid showing of ‘curleys’ when angular js is at the end. Used instead of &lt;code&gt;angular expression.&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Use to avoid showing of ‘curleys’ when angular js is at the end. Used instead of &lt;strong&gt;angular expression.&lt;/strong&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;h3 id=&quot;tools&quot;&gt;Tools&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk&quot; target=&quot;_blank&quot;&gt;AngularJS Batarang&lt;/a&gt;&lt;/strong&gt;
+Extends the Chrome Developer Tools, adding tools for debugging and profiling AngularJS applications.&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 05 Jun 2015 22:46:00 +0530</pubDate>

@@ -35,7 +35,25 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
+/**
+* Table
+*/
+table{
+      border-spacing: 0;
+      border-collapse: collapse;
+      margin-bottom: $spacing-unit / 2;
+}
+table {
+    td,
+    th {
+        padding: 6px 13px;
+        border: 1px solid $table-border-color;
+    }
+}
 
+table tr:nth-child(even){
+    background-color: $table-odd-row-color;
+}
 
 /**
  * Images
@@ -44,8 +62,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
-
 
 /**
  * Figures
