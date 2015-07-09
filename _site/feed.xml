@@ -2,13 +2,100 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Developer&#39;s Diary</title>
-    <description>A diary of a software developer as he sails through the vast sea of knowledge of ever changing technologies.  Passionate to learn he rights his learnings down to discover more and more.
+    <description>A diary of a software developer as he sails through the vast sea of knowledge of ever changing technologies.  Passionate to learn he writes his learnings down to discover more and more.
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 06 Jul 2015 22:06:06 +0530</pubDate>
-    <lastBuildDate>Mon, 06 Jul 2015 22:06:06 +0530</lastBuildDate>
+    <pubDate>Fri, 10 Jul 2015 00:23:22 +0530</pubDate>
+    <lastBuildDate>Fri, 10 Jul 2015 00:23:22 +0530</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Understanding Node</title>
+        <description>&lt;p&gt;Recently NodeJs is the next happening stuff in the technology world. I try to explore what this baby is all about.&lt;/p&gt;
+
+&lt;h3 id=&quot;whats-node&quot;&gt;What’s Node?&lt;/h3&gt;
+&lt;p&gt;NodeJs provides a &lt;strong&gt;purely evented, non-blocking infrastructure&lt;/strong&gt; to script &lt;strong&gt;highly concurrent&lt;/strong&gt; programs.&lt;/p&gt;
+
+&lt;p&gt;Node is :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Server-side Javascript platform&lt;/li&gt;
+  &lt;li&gt;Build on Google’s V8 engine, used by Googles Chrome browser&lt;/li&gt;
+  &lt;li&gt;Event driven&lt;/li&gt;
+  &lt;li&gt;non-blocking I/O&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://webpack.github.io/docs/commonjs.html&quot; target=&quot;_blank&quot;&gt;Uses CommonJs module system&lt;/a&gt; – &lt;small&gt;Module format to solve JavaScript scope issues by making sure each module is executed in its own namespace.&lt;/small&gt;&lt;/li&gt;
+  &lt;li&gt;Written mainly C/C++ and Javascript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;why-non-blocking-io&quot;&gt;Why Non-blocking I/O?&lt;/h3&gt;
+
+&lt;p&gt;Web application offent does a connection to a database or other I/O activity during which the software is just waiting for the response. 
+&lt;img src=&quot;/images/blog/webServerUsingThreads.png&quot; alt=&quot;Webserver using thread &quot; width=&quot;600px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This can be multi tasked by having different threads of execution running.&lt;/p&gt;
+
+&lt;p&gt;A &lt;a href=&quot;http://wiki.dreamhost.com/Web_Server_Performance_Comparison&quot; target=&quot;_blank&quot;&gt;comparison&lt;/a&gt; between Apache web server and Nginx shows: 
+&lt;img src=&quot;/images/blog/webserverRequestsGraph.jpg&quot; alt=&quot;Apache Nginx request graph&quot; width=&quot;300px&quot; /&gt;
+&lt;img src=&quot;/images/blog/webserverMemoryGraph.jpg&quot; alt=&quot;Apache Nginx memory graph&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Point to note here is Apache uses threads while Nginx uses event loop for concurrency.&lt;/p&gt;
+
+&lt;p&gt;Thus with concurrency using threads or coroutines one can see:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Throughput &lt;small&gt;(request / sec)&lt;/small&gt; reduceses as number of users increases - Context switching is not free &lt;/li&gt;
+  &lt;li&gt;Memory footprint increases as number of concurrent uses increase - Execution stacks takes up memory &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Threaded concurrency needs handling of memory issues, thread blocking issues.&lt;/p&gt;
+
+&lt;p&gt;Event loop based approach is the best for highly concurrent programs. &lt;/p&gt;
+
+&lt;h4 id=&quot;whats-event-loop&quot;&gt;What’s event loop?&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/webServerUsingEventLoop.png&quot; alt=&quot;Webserver using thread &quot; width=&quot;600px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In an event loop the server uses single thread to run a loop for checking different events occuring like request received, data ready etc. As a particular event occurs the event loop catches it and immediately hands over the processing to another execution thread along with a call back function stating once you are done call back this function. When the call back function is called the event loop again catches it back completes the process.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Single threaded event loops require I/O to be non-blocking.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If a blocking I/O takes places within the loop it cannot process any other request as its single threaded and all the other request get rejected.&lt;/p&gt;
+
+&lt;p&gt;Javascript is designed specially to be used with an event loop:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Anonymous functions, closures&lt;/li&gt;
+  &lt;li&gt;Only one callback at a time&lt;/li&gt;
+  &lt;li&gt;I/O through DOM event callbacks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Node uses non-blocking and event loop concept internally that optimizes an application’s throughput and scalability.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;node-good-parts&quot;&gt;Node Good Parts&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Node avoids spinning up threads &lt;/li&gt;
+  &lt;li&gt;Node can delegate execution of the request to a separate component&lt;/li&gt;
+  &lt;li&gt;Node talks JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;node-bad-parts&quot;&gt;Node Bad Parts&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Node sucks at computational intensive tasks&lt;/li&gt;
+  &lt;li&gt;Node doesn’t fully utilize multi-core CPUs&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Fri, 10 Jul 2015 10:46:00 +0530</pubDate>
+        <link>http://yourdomain.com/javascript/2015/07/10/understanding-node.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/javascript/2015/07/10/understanding-node.html</guid>
+        
+        
+        <category>javascript</category>
+        
+      </item>
     
       <item>
         <title>ng-me</title>
@@ -71,9 +158,9 @@ The directive are used with ‘data’ prefixed to them as some browsers do not 
 Extends the Chrome Developer Tools, adding tools for debugging and profiling AngularJS applications.&lt;/p&gt;
 
 </description>
-        <pubDate>Fri, 05 Jun 2015 22:46:00 +0530</pubDate>
-        <link>http://yourdomain.com/angular/2015/06/05/ng-me.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/angular/2015/06/05/ng-me.html</guid>
+        <pubDate>Sun, 05 Jul 2015 22:46:00 +0530</pubDate>
+        <link>http://yourdomain.com/angular/2015/07/05/ng-me.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/angular/2015/07/05/ng-me.html</guid>
         
         
         <category>angular</category>

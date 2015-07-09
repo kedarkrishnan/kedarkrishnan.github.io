@@ -58,3 +58,15 @@ Javascript is designed specially to be used with an event loop:
 * I/O through DOM event callbacks
 
 **Node uses non-blocking and event loop concept internally that optimizes an application's throughput and scalability.**
+
+#### Node Good Parts
+
+* Node avoids spinning up threads 
+* Node can delegate execution of the request to a separate component
+* Node talks JavaScript
+
+#### Node Bad Parts
+
+* Node sucks at computational intensive tasks
+* Node doesn't fully utilize multi-core CPUs
+
