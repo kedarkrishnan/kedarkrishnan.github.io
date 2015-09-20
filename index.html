@@ -1,8 +1,23 @@
 ---
 layout: default
+theme: blogs
 ---
-
-<div class="home">
+<div class="page-content {{ page.theme }}">
+<header >
+    <h1 class="page-title">Blogs</h1>
+</header>
+<section>         
+    <ul class="post-list list-unstyled">
+    {% for post in site.posts %}
+      <li class="post" data-url="{{ post.url | prepend: site.baseurl }}">
+        <span class="post-date">{{ post.date | date: "%b %d"}} <small>{{post.date | date: "%Y"}}</small></span>
+        <span class="post-link">{{ post.title }}</span>
+      </li>
+    {% endfor %}
+    </ul>
+</section>
+</div>
+<!-- <div class="home">
 
   <h1 class="page-heading">Posts</h1>
 
@@ -20,4 +35,4 @@ layout: default
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>
+</div> -->

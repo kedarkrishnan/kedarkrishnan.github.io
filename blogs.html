@@ -1,0 +1,17 @@
+---
+layout: page
+title: Blogs
+showtitle: yes
+theme: blogs
+permalink: /blogs.html
+---
+<section>         
+    <ul class="post-list list-unstyled">
+    {% for post in site.posts %}
+      <li class="post" data-url="{{ post.url | prepend: site.baseurl }}">
+        <span class="post-date">{{ post.date | date: "%b %d"}} <small>{{post.date | date: "%Y"}}</small></span>
+        <span class="post-link">{{ post.title }}</span>
+      </li>
+    {% endfor %}
+    </ul>
+</section>
