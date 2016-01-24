@@ -107,14 +107,14 @@
 	}
 	
 	function getPage(url,id){		
-		console.log("url: " + url);
+		//console.log("url: " + url);
 		$.get(url,function(data){
 			$(id).html(data);	
 		}).error(function(){
 			loadPage("/#/blogs.html");	
 		}).done(function(){
 			window.location.hash =url;
-			console.log("TOP "+ currentPosition)
+			//console.log("TOP "+ currentPosition)
 			if (currentPosition > $(id).offset().top) {
 				$(window).scrollTop($(".site-header-shadow").offset.top+50);
 			}

@@ -7,6 +7,27 @@ body {
     background-color: $background-color;
     -webkit-font-smoothing: antialiased;
 }
+.card{
+    width:250px;
+    box-shadow: 0 0px 2px rgba(0,0,0,0.26);
+    padding:20px;
+    margin:auto;
+    margin-top:40px;
+    float:inherit;
+}
+.card-pic{
+    display:inline;
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    padding:2px;
+}
+.card-details{
+    display:inline;
+}
+.card-info a{
+    padding-top:3px;
+}
 
 /**
  * Site header
@@ -240,7 +261,7 @@ body {
 }
 .post-date{
     display:inline-block;
-    width:60px;
+    width:70px;
     min-height:50px;
     padding:5px;
     vertical-align: middle;   
@@ -251,6 +272,8 @@ body {
 .post-link{
     vertical-align: middle;  
     color:$brand-color-blogs;
+    line-height: 3;
+    padding-left: 20px;
 }
 .post-meta{
     font-size:small-font-size;
@@ -297,6 +320,13 @@ body {
     padding:10px;   
     color:$text-color;
 }
+.tag{
+    color:$tag-color;
+    background-color:$tag-background-color;
+    border-radius:5px;
+    padding:2px 5px;
+    margin-left:5px;
+}
 /**
  * Resume
  */
@@ -326,6 +356,9 @@ body {
     color:$resume-text-color;
     padding:15px;
     text-align:center;        
+    a{
+        text-color:#fff;
+    }
 }
 .resume-section-title,.resume-skill-title,.resume-section-detail{
     padding:10px;    
@@ -475,7 +508,7 @@ body {
     }
     .hobbies > h2{
         font-size:24px
-    }      
+    }          
 }
 @include media-query($on-laptop) {
     .site-header-primary{
@@ -521,4 +554,8 @@ body {
             background: transparent;
         }    
     }  
+    .card{
+        float:right;
+        margin: -60px;
+    }
 }

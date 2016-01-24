@@ -84,7 +84,7 @@ permalink: /resume.html
 			    		<div id="profile1" class="tab-pane fade in active ">	    			
 				    		<ul class="list-unstyled list-plus-bullet">
 				    			<li>Designing / developing BIRT reports</li>
-				    			<li>Designing parsers to consume web services to generate reports</li>
+				    			<li>Designing parsers in <strong>Java</strong> to consume <strong>SOAP web services</strong> to generate reports</li>
 				    			<li>Writing SQL queries to provide data for Reports</li>
 				    			<li>Leading the team (India and US) with report designing and best practices</li>
 				    			<li>Working with Product team and Business analyst to gather requirements and gap analysis</li>
@@ -95,12 +95,12 @@ permalink: /resume.html
 			    		</div>
 			    		<div id="achievements1"class="tab-pane fade">
 							<ul class="list-unstyled list-plus-bullet">
-								<li>Reduced report development time by 15% by creating BIRT framework</li>
-								<li>Saved License cost by developing deployment architecture to support multiple environments on the same Actuate BIRT Server</li>
-								<li>Developed Interactive report feature using open source BIRT,giving capabilities of dynamically grouping, sorting, filtering data as well as adding graphs, notes to online report and saving the template</li>
+								<li><strong>Reduced</strong> report <strong>development time by 15%</strong> by creating BIRT framework</li>
+								<li><strong>Saved License cost</strong> by developing reporting architecture using <strong>Open source BIRT</strong></li>
+								<li>Developed <strong>Interactive report</strong> feature using open source BIRT,giving capabilities of dynamically grouping, sorting, filtering data as well as adding graphs, notes to online report and saving the template</li>
 								<li>Conducted BIRT trainings</li>
-								<li>Using BPM driven process engineered a central hardware and seat management system to track the hardware / seat allocated to employee</li>
-								<li>Enhanced look and feel, user interface of a prime faces project using Bootstrap.</li>
+								<li>Engineered and developed a central hardware and seat management system using <strong>Angular, Node and Bootstrap,</strong>.</li>
+								<li>Enhanced look and feel, user interface of a prime faces project using <strong>Bootstrap</strong>.</li>
 							</ul>
 			    		</div>
 						<div id="awards1" class="tab-pane fade">	
@@ -128,16 +128,16 @@ permalink: /resume.html
 			    		<div id="profile2" class="tab-pane fade in active">	    			
 				    		<ul class="list-unstyled list-plus-bullet">
 				    			<li>Creating Actuate e-Reports from existing Crystal reports</li>
-				    			<li>Creation of Technical Design Documents (TADD), Unit test plans</li>
+				    			<li>Creation of <strong>Technical Design Documents (TADD), Unit test plans</strong></li>
 				    			<li>Writing SQL queries for fetching data for reports</li>
 				    			<li>Designing and coordinating report requirements for all the modules</li>
 				    			<li>Using Actuate IDAPI to integrate reports with exiting UI /frontend</li>
-				    			<li>Worked as Onsite coordinator in US- Boston for the client State Street (US Boston) managing offshore India team</li>
+				    			<li>Worked as <strong>Onsite coordinator</strong> in US- Boston for the client State Street (US Boston) managing offshore India team</li>
 				    		</ul>
 				    	</div>
 				    	<div id="achievements2"class="tab-pane fade">
 							<ul class="list-unstyled list-plus-bullet">
-								<li>Conceived, designed and developed an in-house Actuate portal DICE for Syntel’s Center of Excellence (CEO), used for pre-sales</li>
+								<li>Conceived, designed and developed an in-house Actuate portal DICE for Syntel’s Center of Excellence (CEO), used for pre-sales using <strong>Struts 2</strong></li>
 							</ul>
 						</div>	
 						<div id="awards2" class="tab-pane fade">	
@@ -186,9 +186,9 @@ permalink: /resume.html
     </div>	
 </div>
 <script src="/js/d3.min.js"></script>
-<script src="/js/infoGraph.min.js"></script>
+<script src="/js/infoGraph.js"></script>
 <script>
-	skillsWeb=[{
+	var skillsWeb=[{
 		"skill" : "HTML 5",
 		"level"	: "7"
 	},
@@ -209,28 +209,20 @@ permalink: /resume.html
 		"level"	: "5"
 	},
 	{
-		"skill" : "Ember",
-		"level"	: "3"	
-	},
-	{
 		"skill" : "Angular",
-		"level"	: "2"	
+		"level"	: "6"	
 	}];
 
-	skillsBackend=[{
+	var skillsBackend=[{
 		"skill" : "Java",
 		"level"	: "6"
 	},
 	{
 		"skill" : "Spring MVC",
 		"level"	: "5"
-	},
-	{
-		"skill" : "Mule",
-		"level"	: "3"
 	}];
 
-	skillsReporting=[{		
+	var skillsReporting=[{		
 		"skill" : "BIRT",
 		"level"	: "8"
 	},
@@ -247,7 +239,7 @@ permalink: /resume.html
 		"level"	: "3"
 	}];
 
-	skillsData=[{
+	var skillsData=[{
 		"skill" : "SQL",
 		"level"	: "5"
 	},
@@ -256,7 +248,7 @@ permalink: /resume.html
 		"level"	: "3"	
 	}];
 
-	skillsMethods=[{
+	var skillsMethods=[{
 		"skill" : "Agile",
 		"level"	: "6"
 	},
@@ -265,7 +257,7 @@ permalink: /resume.html
 		"level"	: "8"
 	}];
 
-	skillsServers=[{
+	var skillsServers=[{
 		"skill" : "Tomcat",
 		"level"	: "3"
 	},
@@ -274,7 +266,7 @@ permalink: /resume.html
 		"level"	: "5"
 	}];
 
-	skillsTools=[{
+	var skillsTools=[{
 		"skill" : "Eclipse",
 		"level"	: "5"
 	},
@@ -291,7 +283,7 @@ permalink: /resume.html
 		"level"	: "3"
 	}];
 
-	bubleColor="#01579B";
+	var bubleColor="#01579B";
 	infoGraph.skillLevel.bubleColor(bubleColor).bubleStrokeColor(bubleColor).labelStart(70).draw("skillsWeb",skillsWeb);
 	infoGraph.skillLevel.bubleColor(bubleColor).bubleStrokeColor(bubleColor).labelStart(75).draw("skillsBackend",skillsBackend);
 	infoGraph.skillLevel.bubleColor(bubleColor).bubleStrokeColor(bubleColor).labelStart(60).draw("skillsData",skillsData);

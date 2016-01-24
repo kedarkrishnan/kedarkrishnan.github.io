@@ -6,9 +6,112 @@
 </description>
     <link>http://kedarkrishnan.github.io/</link>
     <atom:link href="http://kedarkrishnan.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 20 Sep 2015 20:09:23 +0530</pubDate>
-    <lastBuildDate>Sun, 20 Sep 2015 20:09:23 +0530</lastBuildDate>
+    <pubDate>Sun, 24 Jan 2016 13:44:57 +0530</pubDate>
+    <lastBuildDate>Sun, 24 Jan 2016 13:44:57 +0530</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Notes - Java Servlet</title>
+        <description>&lt;h1 id=&quot;notes---java-servlet&quot;&gt;Notes - Java Servlet&lt;/h1&gt;
+
+&lt;p&gt;Java servlets are programs that run on a Web or Application server and act as a middle layer between a request coming form a browser or HTTP client and database or applications. &lt;/p&gt;
+
+&lt;h2 id=&quot;servlet-life-cycle&quot;&gt;Servlet Life Cycle&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Loading&lt;/strong&gt; - Class loader load the servlet class. Every web application will get a different class loader which would be used for loading the web components. This allows deployment of two versions of the same application in the same container and every application can have same full class names.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Instantiation&lt;/strong&gt; - Servlet instance is created by the web container when the servlet is loaded.
+During initialization it is possible to get ServletException. Raising of this exception in init method will signal container that some error occurred and container will stop initialization and mark servlet instance as ready for garbage collector and this will not cause calling of the destroy method.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Initialization&lt;/strong&gt; - Called only once when the servlet is created&lt;code&gt;init(ServletConfig config)&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Service&lt;/strong&gt; - Called by web container to handle request from clients &lt;code&gt;service(ServletRequest request, 
+ServletResponse response)&lt;/code&gt;.
+During service method it is possible to get ServletException or UnavailableException. This exceptions can be temporary or permanent. In case of temporary exception server will block calling of service method for some time, but in case of permanent exception destroy method will be called and servlet will be ready for garbage collector, and every future call to this servlet will lead to 404 response.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Destroy&lt;/strong&gt; - Called before removing thr servlet instance &lt;code&gt;destroy()&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Web.xml&lt;/p&gt;
+&lt;servlet&gt;
+	&lt;servlet-name&gt;Hello World&lt;/servlet-name&gt;
+	&lt;servlet-class&gt;HelloWorld&lt;/servlet-class&gt;
+	&lt;init-param&gt;
+		&lt;param-name&gt;Hello&lt;/param-name&gt;
+	&lt;/init-param&gt;
+&lt;/servlet&gt;
+
+&lt;servlet-mapping&gt;
+	&lt;servlet-name&gt;Hello World&lt;/servlet-name&gt;
+	&lt;url-pattern&gt;/helloworld&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+
+&lt;h2 id=&quot;filters-servlet&quot;&gt;Filters Servlet&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Intercept the request from the client before they access a resource at back end&lt;/li&gt;
+  &lt;li&gt;Manipulating responses from server before they are send back to the client&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;web.xml&lt;/p&gt;
+&lt;filter&gt;
+   &lt;filter-name&gt;LogFilter&lt;/filter-name&gt;
+   &lt;filter-class&gt;LogFilter&lt;/filter-class&gt;
+   &lt;init-param&gt;
+	  &lt;param-name&gt;test-param&lt;/param-name&gt;
+	  &lt;param-value&gt;Initialization Paramter&lt;/param-value&gt;
+   &lt;/init-param&gt;
+&lt;/filter&gt;
+&lt;filter-mapping&gt;
+   &lt;filter-name&gt;LogFilter&lt;/filter-name&gt;
+   &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;
+&lt;p&gt;The order of filter-mapping elements in web.xml determines the order in which the web container applies the filter to the servlet.&lt;/p&gt;
+
+&lt;h2 id=&quot;error-page&quot;&gt;Error Page&lt;/h2&gt;
+&lt;p&gt;Servlet exception can be handled using the configurations in web.xml for error-page either by using an error-code or an exception-type.&lt;/p&gt;
+
+&lt;p&gt;web.xml&lt;/p&gt;
+&lt;error-page&gt;
+	&lt;error-code&gt;403&lt;/error-code&gt;
+	&lt;location&gt;/HandlerClass&lt;/location&gt;
+&lt;/error-page&gt;
+&lt;error-page&gt;
+	&lt;exception-type&gt;java.io.IOException&lt;/exception-type&gt;
+	&lt;location&gt;/HandlerClass&lt;/location&gt;
+&lt;/error-page&gt;
+
+&lt;h2 id=&quot;servletcontext&quot;&gt;ServletContext&lt;/h2&gt;
+&lt;p&gt;Every application is executed inside its own context. The context attributes are application scoped attributes and available to all the servlets in the application. &lt;/p&gt;
+&lt;context-param&gt;
+	&lt;param-name&gt;contextParameter&lt;/param-name&gt;
+	&lt;param-value&gt;value&lt;/param-value&gt;
+&lt;/context-param&gt;
+
+&lt;h2 id=&quot;servletconfig&quot;&gt;ServletConfig&lt;/h2&gt;
+&lt;p&gt;Every servlet has it’s own ServletConfig object and servlet container is responsible for instantiating the object.&lt;/p&gt;
+
+&lt;h2 id=&quot;request-dispatcher&quot;&gt;Request Dispatcher&lt;/h2&gt;
+&lt;p&gt;RequestDispatcher interface is used to forward the request to another resource that can be HTML, JSP or another servlet in same application. &lt;/p&gt;
+
+&lt;h2 id=&quot;servletwrapper&quot;&gt;ServletWrapper&lt;/h2&gt;
+&lt;p&gt;Wrapper classes are provided to help developers with custom implementation of servlet request and response.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;HTTPServletRequestWrapper&lt;/code&gt; &lt;code&gt;HTTPServletResponseWrapper&lt;/code&gt; &lt;/p&gt;
+</description>
+        <pubDate>Wed, 30 Sep 2015 23:51:00 +0530</pubDate>
+        <link>http://kedarkrishnan.github.io/blogs/java/2015/09/30/servlet.html</link>
+        <guid isPermaLink="true">http://kedarkrishnan.github.io/blogs/java/2015/09/30/servlet.html</guid>
+        
+        
+        <category>blogs/java</category>
+        
+      </item>
     
       <item>
         <title>Understanding Node</title>
