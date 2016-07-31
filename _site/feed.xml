@@ -6,9 +6,165 @@
 </description>
     <link>http://kedarkrishnan.github.io/</link>
     <atom:link href="http://kedarkrishnan.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 24 Jan 2016 13:44:57 +0530</pubDate>
-    <lastBuildDate>Sun, 24 Jan 2016 13:44:57 +0530</lastBuildDate>
+    <pubDate>Mon, 01 Aug 2016 11:14:55 +1200</pubDate>
+    <lastBuildDate>Mon, 01 Aug 2016 11:14:55 +1200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>ng-me</title>
+        <description>&lt;h1 id=&quot;basics-of-angular&quot;&gt;Basics of Angular&lt;/h1&gt;
+
+&lt;h2 id=&quot;way-data-binding&quot;&gt;2 way Data binding&lt;/h2&gt;
+&lt;p&gt;In case of one way binding only the values declared in the javascript are displayed on the browser page (DOM objects). While in two way data binding any change in the browser (DOM input controls) is automatically reflected in the javascript variable.&lt;/p&gt;
+
+&lt;h2 id=&quot;model-view-view-model-mvvw--mv--mvw&quot;&gt;Model View View Model (MVVW === MV* === MVW)&lt;/h2&gt;
+&lt;p&gt;In a Server end architecture MVC =&amp;gt; Model View Controller where model handles the data, the controller is responsible for the flow management and the View is the presentation layer.
+In case of client end architecture there can be a need of massaging the data obtained in the Model thus creating a new Model for the view aka. View Model.
+The controller here does much more than managing the flow hence Model view Whatever (MVW). &lt;/p&gt;
+
+&lt;h2 id=&quot;client-side-templates&quot;&gt;Client side templates&lt;/h2&gt;
+&lt;p&gt;In the first server call from the client the basic template of the layout is send back and in all the subsequent calls only data is send to and fro between the client and the server.&lt;/p&gt;
+
+&lt;h2 id=&quot;client-side-routing&quot;&gt;Client side routing&lt;/h2&gt;
+&lt;p&gt;Client decides what view to display based on the URL, server is responsible for only providing the data.&lt;/p&gt;
+
+&lt;h2 id=&quot;inversion-of-control&quot;&gt;Inversion of Control&lt;/h2&gt;
+&lt;p&gt;The objects needed are provided rather than one having to invoke the object.&lt;/p&gt;
+
+&lt;h2 id=&quot;ng-directives&quot;&gt;ng-directives&lt;/h2&gt;
+&lt;p&gt;Angular helps you extend HTML with new attributes called Directives thus making the static HTML dynamic.
+The directive are used with ‘data’ prefixed to them as some browsers do not understand the angular specific tags, adding of data makes them HTML5 attributes and thus compatible.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Directive&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ng-app&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Initializes the angular app within the tag it is added.  &lt;strong&gt;Javascript side maps to:&lt;/strong&gt; &lt;code&gt;angular.module(&#39;todoApp&#39;,[])&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ng-controller&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Makes scope objects available to the html. &lt;strong&gt;Javascript side maps to:&lt;/strong&gt; &lt;code&gt;angular.controller(&#39;TodoAppController&#39;,function($scope){}&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ng-repeat&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Looping through array.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ng-model&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Bind data to html.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ng-bind&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Use to avoid showing of ‘curleys’ when angular js is at the end. Used instead of &lt;strong&gt;angular expression.&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk&quot; target=&quot;_blank&quot;&gt;AngularJS Batarang&lt;/a&gt;&lt;/strong&gt;
+Extends the Chrome Developer Tools, adding tools for debugging and profiling AngularJS applications.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 03 Jan 2016 00:00:00 +1300</pubDate>
+        <link>http://kedarkrishnan.github.io/blogs/ng-me.html</link>
+        <guid isPermaLink="true">http://kedarkrishnan.github.io/blogs/ng-me.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Understanding Node</title>
+        <description>&lt;p&gt;Recently NodeJs is the next happening stuff in the technology world. I try to explore what this baby is all about.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-node&quot;&gt;What’s Node?&lt;/h2&gt;
+&lt;p&gt;NodeJs provides a &lt;strong&gt;purely evented, non-blocking infrastructure&lt;/strong&gt; to script &lt;strong&gt;highly concurrent&lt;/strong&gt; programs.&lt;/p&gt;
+
+&lt;p&gt;Node is :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Server-side Javascript platform&lt;/li&gt;
+  &lt;li&gt;Build on Google’s V8 engine, used by Googles Chrome browser&lt;/li&gt;
+  &lt;li&gt;Event driven&lt;/li&gt;
+  &lt;li&gt;non-blocking I/O&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://webpack.github.io/docs/commonjs.html&quot; target=&quot;_blank&quot;&gt;Uses CommonJs module system&lt;/a&gt; – &lt;small&gt;Module format to solve JavaScript scope issues by making sure each module is executed in its own namespace.&lt;/small&gt;&lt;/li&gt;
+  &lt;li&gt;Written mainly C/C++ and Javascript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;why-non-blocking-io&quot;&gt;Why Non-blocking I/O?&lt;/h2&gt;
+
+&lt;p&gt;Web application offent does a connection to a database or other I/O activity during which the software is just waiting for the response. 
+&lt;img src=&quot;/images/blog/webServerUsingThreads.png&quot; alt=&quot;Webserver using thread &quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This can be multi tasked by having different threads of execution running.&lt;/p&gt;
+
+&lt;p&gt;A &lt;a href=&quot;http://wiki.dreamhost.com/Web_Server_Performance_Comparison&quot; target=&quot;_blank&quot;&gt;comparison&lt;/a&gt; between Apache web server and Nginx shows: &lt;/p&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;img src=&quot;/images/blog/webserverRequestsGraph.jpg&quot; alt=&quot;Apache Nginx request graph&quot; class=&quot;img-responsive col-md-6&quot; /&gt;
+&lt;img src=&quot;/images/blog/webserverMemoryGraph.jpg&quot; alt=&quot;Apache Nginx memory graph&quot; class=&quot;img-responsive col-md-6&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Point to note here is Apache uses threads while Nginx uses event loop for concurrency.&lt;/p&gt;
+
+&lt;p&gt;Thus with concurrency using threads or coroutines one can see:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Throughput &lt;small&gt;(request / sec)&lt;/small&gt; reduceses as number of users increases - Context switching is not free &lt;/li&gt;
+  &lt;li&gt;Memory footprint increases as number of concurrent uses increase - Execution stacks takes up memory &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Threaded concurrency needs handling of memory issues, thread blocking issues.&lt;/p&gt;
+
+&lt;p&gt;Event loop based approach is the best for highly concurrent programs. &lt;/p&gt;
+
+&lt;h2 id=&quot;whats-event-loop&quot;&gt;What’s event loop?&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/webServerUsingEventLoop.png&quot; alt=&quot;Webserver using thread &quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In an event loop the server uses single thread to run a loop for checking different events occuring like request received, data ready etc. As a particular event occurs the event loop catches it and immediately hands over the processing to another execution thread along with a call back function stating once you are done call back this function. When the call back function is called the event loop again catches it back completes the process.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Single threaded event loops require I/O to be non-blocking.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If a blocking I/O takes places within the loop it cannot process any other request as its single threaded and all the other request get rejected.&lt;/p&gt;
+
+&lt;p&gt;Javascript is designed specially to be used with an event loop:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Anonymous functions, closures&lt;/li&gt;
+  &lt;li&gt;Only one callback at a time&lt;/li&gt;
+  &lt;li&gt;I/O through DOM event callbacks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Node uses non-blocking and event loop concept internally that optimizes an application’s throughput and scalability.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;node-good-parts&quot;&gt;Node Good Parts&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Node avoids spinning up threads &lt;/li&gt;
+  &lt;li&gt;Node can delegate execution of the request to a separate component&lt;/li&gt;
+  &lt;li&gt;Node talks JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;node-bad-parts&quot;&gt;Node Bad Parts&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Node sucks at computational intensive tasks&lt;/li&gt;
+  &lt;li&gt;Node doesn’t fully utilize multi-core CPUs&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sat, 02 Jan 2016 00:00:00 +1300</pubDate>
+        <link>http://kedarkrishnan.github.io/blogs/understanding-node.html</link>
+        <guid isPermaLink="true">http://kedarkrishnan.github.io/blogs/understanding-node.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Notes - Java Servlet</title>
@@ -104,172 +260,10 @@ During service method it is possible to get ServletException or UnavailableExcep
 
 &lt;p&gt;&lt;code&gt;HTTPServletRequestWrapper&lt;/code&gt; &lt;code&gt;HTTPServletResponseWrapper&lt;/code&gt; &lt;/p&gt;
 </description>
-        <pubDate>Wed, 30 Sep 2015 23:51:00 +0530</pubDate>
-        <link>http://kedarkrishnan.github.io/blogs/java/2015/09/30/servlet.html</link>
-        <guid isPermaLink="true">http://kedarkrishnan.github.io/blogs/java/2015/09/30/servlet.html</guid>
+        <pubDate>Fri, 01 Jan 2016 00:00:00 +1300</pubDate>
+        <link>http://kedarkrishnan.github.io/blogs/servlet.html</link>
+        <guid isPermaLink="true">http://kedarkrishnan.github.io/blogs/servlet.html</guid>
         
-        
-        <category>blogs/java</category>
-        
-      </item>
-    
-      <item>
-        <title>Understanding Node</title>
-        <description>&lt;p&gt;Recently NodeJs is the next happening stuff in the technology world. I try to explore what this baby is all about.&lt;/p&gt;
-
-&lt;h2 id=&quot;whats-node&quot;&gt;What’s Node?&lt;/h2&gt;
-&lt;p&gt;NodeJs provides a &lt;strong&gt;purely evented, non-blocking infrastructure&lt;/strong&gt; to script &lt;strong&gt;highly concurrent&lt;/strong&gt; programs.&lt;/p&gt;
-
-&lt;p&gt;Node is :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Server-side Javascript platform&lt;/li&gt;
-  &lt;li&gt;Build on Google’s V8 engine, used by Googles Chrome browser&lt;/li&gt;
-  &lt;li&gt;Event driven&lt;/li&gt;
-  &lt;li&gt;non-blocking I/O&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://webpack.github.io/docs/commonjs.html&quot; target=&quot;_blank&quot;&gt;Uses CommonJs module system&lt;/a&gt; – &lt;small&gt;Module format to solve JavaScript scope issues by making sure each module is executed in its own namespace.&lt;/small&gt;&lt;/li&gt;
-  &lt;li&gt;Written mainly C/C++ and Javascript&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;why-non-blocking-io&quot;&gt;Why Non-blocking I/O?&lt;/h2&gt;
-
-&lt;p&gt;Web application offent does a connection to a database or other I/O activity during which the software is just waiting for the response. 
-&lt;img src=&quot;/images/blog/webServerUsingThreads.png&quot; alt=&quot;Webserver using thread &quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This can be multi tasked by having different threads of execution running.&lt;/p&gt;
-
-&lt;p&gt;A &lt;a href=&quot;http://wiki.dreamhost.com/Web_Server_Performance_Comparison&quot; target=&quot;_blank&quot;&gt;comparison&lt;/a&gt; between Apache web server and Nginx shows: &lt;/p&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-&lt;img src=&quot;/images/blog/webserverRequestsGraph.jpg&quot; alt=&quot;Apache Nginx request graph&quot; class=&quot;img-responsive col-md-6&quot; /&gt;
-&lt;img src=&quot;/images/blog/webserverMemoryGraph.jpg&quot; alt=&quot;Apache Nginx memory graph&quot; class=&quot;img-responsive col-md-6&quot; /&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Point to note here is Apache uses threads while Nginx uses event loop for concurrency.&lt;/p&gt;
-
-&lt;p&gt;Thus with concurrency using threads or coroutines one can see:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Throughput &lt;small&gt;(request / sec)&lt;/small&gt; reduceses as number of users increases - Context switching is not free &lt;/li&gt;
-  &lt;li&gt;Memory footprint increases as number of concurrent uses increase - Execution stacks takes up memory &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Threaded concurrency needs handling of memory issues, thread blocking issues.&lt;/p&gt;
-
-&lt;p&gt;Event loop based approach is the best for highly concurrent programs. &lt;/p&gt;
-
-&lt;h2 id=&quot;whats-event-loop&quot;&gt;What’s event loop?&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/blog/webServerUsingEventLoop.png&quot; alt=&quot;Webserver using thread &quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In an event loop the server uses single thread to run a loop for checking different events occuring like request received, data ready etc. As a particular event occurs the event loop catches it and immediately hands over the processing to another execution thread along with a call back function stating once you are done call back this function. When the call back function is called the event loop again catches it back completes the process.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Single threaded event loops require I/O to be non-blocking.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;If a blocking I/O takes places within the loop it cannot process any other request as its single threaded and all the other request get rejected.&lt;/p&gt;
-
-&lt;p&gt;Javascript is designed specially to be used with an event loop:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Anonymous functions, closures&lt;/li&gt;
-  &lt;li&gt;Only one callback at a time&lt;/li&gt;
-  &lt;li&gt;I/O through DOM event callbacks&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Node uses non-blocking and event loop concept internally that optimizes an application’s throughput and scalability.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;node-good-parts&quot;&gt;Node Good Parts&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Node avoids spinning up threads &lt;/li&gt;
-  &lt;li&gt;Node can delegate execution of the request to a separate component&lt;/li&gt;
-  &lt;li&gt;Node talks JavaScript&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;node-bad-parts&quot;&gt;Node Bad Parts&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Node sucks at computational intensive tasks&lt;/li&gt;
-  &lt;li&gt;Node doesn’t fully utilize multi-core CPUs&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Fri, 10 Jul 2015 10:46:00 +0530</pubDate>
-        <link>http://kedarkrishnan.github.io/blogs/javascript/2015/07/10/understanding-node.html</link>
-        <guid isPermaLink="true">http://kedarkrishnan.github.io/blogs/javascript/2015/07/10/understanding-node.html</guid>
-        
-        
-        <category>blogs/javascript</category>
-        
-      </item>
-    
-      <item>
-        <title>ng-me</title>
-        <description>&lt;h1 id=&quot;basics-of-angular&quot;&gt;Basics of Angular&lt;/h1&gt;
-
-&lt;h2 id=&quot;way-data-binding&quot;&gt;2 way Data binding&lt;/h2&gt;
-&lt;p&gt;In case of one way binding only the values declared in the javascript are displayed on the browser page (DOM objects). While in two way data binding any change in the browser (DOM input controls) is automatically reflected in the javascript variable.&lt;/p&gt;
-
-&lt;h2 id=&quot;model-view-view-model-mvvw--mv--mvw&quot;&gt;Model View View Model (MVVW === MV* === MVW)&lt;/h2&gt;
-&lt;p&gt;In a Server end architecture MVC =&amp;gt; Model View Controller where model handles the data, the controller is responsible for the flow management and the View is the presentation layer.
-In case of client end architecture there can be a need of massaging the data obtained in the Model thus creating a new Model for the view aka. View Model.
-The controller here does much more than managing the flow hence Model view Whatever (MVW). &lt;/p&gt;
-
-&lt;h2 id=&quot;client-side-templates&quot;&gt;Client side templates&lt;/h2&gt;
-&lt;p&gt;In the first server call from the client the basic template of the layout is send back and in all the subsequent calls only data is send to and fro between the client and the server.&lt;/p&gt;
-
-&lt;h2 id=&quot;client-side-routing&quot;&gt;Client side routing&lt;/h2&gt;
-&lt;p&gt;Client decides what view to display based on the URL, server is responsible for only providing the data.&lt;/p&gt;
-
-&lt;h2 id=&quot;inversion-of-control&quot;&gt;Inversion of Control&lt;/h2&gt;
-&lt;p&gt;The objects needed are provided rather than one having to invoke the object.&lt;/p&gt;
-
-&lt;h2 id=&quot;ng-directives&quot;&gt;ng-directives&lt;/h2&gt;
-&lt;p&gt;Angular helps you extend HTML with new attributes called Directives thus making the static HTML dynamic.
-The directive are used with ‘data’ prefixed to them as some browsers do not understand the angular specific tags, adding of data makes them HTML5 attributes and thus compatible.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Directive&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Description&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ng-app&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Initializes the angular app within the tag it is added.  &lt;strong&gt;Javascript side maps to:&lt;/strong&gt; &lt;code&gt;angular.module(&#39;todoApp&#39;,[])&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ng-controller&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Makes scope objects available to the html. &lt;strong&gt;Javascript side maps to:&lt;/strong&gt; &lt;code&gt;angular.controller(&#39;TodoAppController&#39;,function($scope){}&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ng-repeat&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Looping through array.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ng-model&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Bind data to html.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ng-bind&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Use to avoid showing of ‘curleys’ when angular js is at the end. Used instead of &lt;strong&gt;angular expression.&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk&quot; target=&quot;_blank&quot;&gt;AngularJS Batarang&lt;/a&gt;&lt;/strong&gt;
-Extends the Chrome Developer Tools, adding tools for debugging and profiling AngularJS applications.&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 05 Jul 2015 22:46:00 +0530</pubDate>
-        <link>http://kedarkrishnan.github.io/blogs/javascript/2015/07/05/ng-me.html</link>
-        <guid isPermaLink="true">http://kedarkrishnan.github.io/blogs/javascript/2015/07/05/ng-me.html</guid>
-        
-        
-        <category>blogs/javascript</category>
         
       </item>
     
