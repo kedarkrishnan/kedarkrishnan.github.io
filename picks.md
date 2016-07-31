@@ -8,7 +8,7 @@ permalink: /picks.html
 
 A list of libraries, articles which I find useful in software development and self learning.
 
-##Books
+## Books
 <a href="http://www.angularjsbook.com/" class="pick" target="_blank"> <span class="pick-name">Angular Basics<span class="glyphicon glyphicon-new-window newwindow-icon"></span></span>
 <span class="pick-desc">A free interacrive book, covering directives, modules, services, controllers, routing and more.
 </span>
