@@ -14,7 +14,7 @@ A list of libraries, articles which I find useful in software development and se
 </span>
 </a>
 
-##Libraries
+## Libraries
 <a href="http://mgcrea.github.io/angular-strap/" class="pick" target="_blank"> <span class="pick-name">AngularStrap<span class="glyphicon glyphicon-new-window newwindow-icon"></span></span>
 <span class="pick-desc">AngularStrap is a set of native directives that enables seamless integration of Bootstrap#^3.0 into your AngularJS#^1.2 application.
 </span>
