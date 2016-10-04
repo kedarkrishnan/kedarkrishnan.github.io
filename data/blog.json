@@ -1,0 +1,16 @@
+[
+	{
+		"title" : "Creating revealing header and footer with CSS",
+		"tags"	: "CSS",
+		"link"	: "#/blog/creating-revealing-layers",
+		"summary": "The effect we are looking for is like slide in and out of the header and footer. So when the main page is scrolled up the top header of the page slides under the main page while the footer is releaved as though it was under the main page... ",
+		"imageUrl" : "./images/blog/creating-revealing-layers.gif"
+	},
+	{
+		"title" : "Object oriented programming concepts revisited (Java)",
+		"tags"	: "Java",
+		"link"	: "#/blog/oop-concepts",		
+		"summary": "",
+		"imageUrl" : "./images/blog/oop-concepts.png"
+	}
+]

@@ -1,19 +1,85 @@
----
-layout: default
-theme: blogs
----
-<div class="page-content {{ page.theme }}">
-<header >
-    <h1 class="page-title">Blogs</h1>
-</header>
-<section>         
-    <ul class="post-list list-unstyled">
-    {% for post in site.posts %}
-      <li class="post" data-url="{{ post.url | prepend: site.baseurl }}">
-        <span class="post-link">{{ post.title }}</span>
-      </li>
-    {% endfor %}
-    </ul>
-</section>
-</div>
-
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Developers Diary</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/kedar.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row wrapper">
+			<header>
+				<nav class="navbar navbar-fixed-top">
+					<div class="navbar-header">
+				    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+				      	</button>
+					    <a class="navbar-brand" href="#/home">
+							<img class="logo img-responsive" src="./images/kk.png">
+							<span class="brand">Developers</span> <span class="brand">Diary</span>
+						</a>
+				    </div>
+				    <div class="collapse navbar-collapse" id="menu">
+						<ul class="nav navbar-nav">
+							<li><a href="#/me">@Me</a></li>
+							<li><a href="#/projects">Projects</a></li>
+							<li><a href="#/blog">Blog</a></li>
+							<li><a href="#/bare-bones">Bare Bones</a></li>
+						</ul>
+					</div>	
+				</nav>			
+			</header>	
+			<div class="hero-pic"></div>
+			<div class="hero">
+				<h1 class="hero-title"></h1>
+				<h2 class="hero-sub-title"></h2>
+				<p class="hero-text"></p>				
+			</div>	
+			<section class="content">
+			</section>
+			<footer class="footer text-center">
+				<h1>Kedar Krishnan</h1>
+				<div class="social">
+					<ul class="list-unstyled list-inline">
+						<li>
+							<a href="https://twitter.com/kedarkrishnan" target="_blank">
+								<span class="fa-stack fa-lg">
+								  <i class="fa fa-circle fa-stack-2x"></i>
+								  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>		
+						<li>
+							<a href="https://github.com/kedarkrishnan" target="_blank">
+								<span class="fa-stack fa-lg fa-github">
+								  <i class="fa fa-circle fa-stack-2x"></i>
+								  <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://nz.linkedin.com/in/kedarkrishnan" target="_blank">
+								<span class="fa-stack fa-lg">
+								  <i class="fa fa-circle fa-stack-2x"></i>
+								  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>	
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="./js/kedar.js"></script>
+	<script src="./js/disqus.js"></script>	
+</body>
+</html>

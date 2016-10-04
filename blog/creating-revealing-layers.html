@@ -1,0 +1,41 @@
+<div class="config" 
+  data-page-title="Creating revealing header and footer with CSS"
+  data-hero-title="Blog"
+  data-hero-sub-title="Creating revealing header and footer with CSS"
+ ></div>
+<div class="col-md-10 col-md-offset-1">
+	<!--Recent Post-->
+	<div class="col-md-4 card card-side pull-right hidden-xs">
+		<div class="card-content">
+			<div class="card-details">
+				<h5 class="text-upper text-center">Recent Posts</h5>
+				<ul class="list" id="recent-list"></ul>
+			</div>	
+		</div>
+	</div>	
+	<div class="col-md-8 card">
+		<div class="card-article">
+	      <div class="card-details">
+	      	<h3>Creating revealing header and footer with CSS</h3>  
+	      	<p>The effect we are looking for is like slide in and out of the header and footer. So when the main page is scrolled up the top header of the page slides under the main page while the footer is releaved as though it was under the main page.</p>
+	      	
+	      	<p data-height="432" data-theme-id="light" data-slug-hash="wzApGE" data-default-tab="result" data-user="kedarkrishnan" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/kedarkrishnan/pen/wzApGE/">Revealing header and footer effect with simple CSS</a> by Kedar Krishnan (<a href="http://codepen.io/kedarkrishnan">@kedarkrishnan</a>) on <a href="http://codepen.io">CodePen</a>.</p>				
+	      	 
+	      	<p>
+	      		This can be obtained using the z-index property of css and fixing the layers we want to reveal. 				
+	      		We create two layers one with z-index of 1000 which would act as the top layer (section tag, .content class) and another with the z-index of 999 (header and footer tags, .header and .footer class) which would go below the top layer. The position of the bottom layer is set to fixed so that they remain at the top and bottom of the page respectively. The header and the footer are hidden by the section layer because of this setup, yeap we need to provide a background color for the top layer.	      		 	
+	      		<div class="article-img"><img class="img-responsive" src="./images/blog/creating-revealing-layers-1.png" alt="Figure 1"> </div>
+	      	</p> 
+	      	<p>
+	      		As the trick is to cover the bottom layer it is important that the height of the section is bigger than the height of the header and footer. Now to display the header and footer we move the content of the top layer by giving it top and bottom margin and we are all set. As the page is scrolled the top layer margin section moves up and the content section covers the header. In the same way as we reach the end of the page due to the bottom margin the footer section is revealed.
+	      		<div class="article-img"><img class="img-responsive" src="./images/blog/creating-revealing-layers-2.png" alt="Figure 2"> </div>
+	      	</p>
+	      	<p>
+	      		Hope you like the quick and easy css trick. Let me know your thoughts below.
+	      	</p>	      	
+	      </div>
+	      <div id="disqus_thread" class="card-article-disqus"></div>	      		
+	    </div>
+	    <script async src="//assets.codepen.io/assets/embed/ei.js"></script> 
+	</div>    
+</div>
