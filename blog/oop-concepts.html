@@ -17,31 +17,31 @@
 		<div class="card-article">
 	      <div class="card-details">
 	      	<h3>Object oriented programming concepts revisited (Java)</h3> 
-	      	<p>This post is amied to revise the key concepts of Encapsulation, Abstraction, Polymorphism and Inheritance.</p>
+	      	<p>This post is aimed to revise the key concepts of Encapsulation, Abstraction, Polymorphism and Inheritance.</p>
 	      	<h4>Encapsulation</h4>
 	      	<em>Keeping unnecessary details hidden.</em>
 	      	<p>
 	      		Encapsulation is something like creating a black box for the end user. We as a user can operate the LED TV and watch our desired shows on it, but if the TV stops working suddenly we would do a basic check as for the power and the cable lines connection but beyond that the TV is a black box for us. A TV mechanic can further test the components of the TV and if the fault is inside a particular component for him that component is a black box and he would ask us to get it replaced or fixed from the company.
 	      	</p>
 	      	<p>
-	      		In Software also hidding the unnecessary details helps in problem solving. The end user does not have to worry about the details of how the component works but can concentrate on his main business.
+	      		In Software also hiding the unnecessary details helps in problem solving. The end user does not have to worry about the details of how the component works but can concentrate on his main business.
 	      	</p>
 			<img class="img-responsive" src="./images/blog/oop-concepts.png" alt="Figure 1">
 	      	<h4>Abstraction</h4>
 	      	<em>Keeping things relevant.</em>
 	      	<p>
-	      		Why does the TV not include components or circuit for a control of a dish washer or washing machine? Abstraction is all about removing unwanted functionalities till only the ones relavant to the solution remains.  
+	      		Why does the TV not include components or circuit for a control of a dish washer or washing machine? Abstraction is all about removing unwanted functionalities till only the ones relevant to the solution remains.  
 	      	</p>
 
 	      	<h4>Polymorphism</h4>
-	      	<em>Varying behaviour.</em>
+	      	<em>Varying behavior.</em>
 	      	<p>
-	      		Reusability is an important aspect in software development. Polymorphism is the key mechanism to achive to achive this in Object Oriented Programming.
+	      		Reusability is an important aspect in software development. Polymorphism is the key mechanism to achieve this in Object Oriented Programming.
 	      	</p>
 	      	
 	      	<h5>Using Interface</h5>
 	      	<p>
-	      		Suppose we need to write a class which would provide the sum and average of values passed to it. So if the class is provided with number of recantages it should provide the average and sum of areas of all rectangles but if bank accounts are passed it should provide sum and average of balances of all bank account. Thus we need a common code which would work on different objects.
+	      		Suppose we need to write a class which would provide the sum and average of values passed to it. So if the class is provided with a number of rectages it should provide the average and sum of areas of all rectangles but if bank accounts are passed it should provide sum and average of balances of all bank account. Thus we need a common code which would work on different objects.
 	      	</p>
 	      	<p>
 	      		This can be done by creating an interface say 'Measurable' which both the 'BankAccount' and 'Rectangle' would implement and provide what needs to be measured in its 'getMeasure' method. 
@@ -50,13 +50,13 @@
 	      	</p>			
 	      		
 	      	<p>
-	      		The selection of correct 'getMeasure' method is not done at compilation time the virtual machine selects the corret method based on the object. This method of selection is called <em>late binding</em>.
+	      		The selection of correct 'getMeasure' method is not done at compilation time the virtual machine selects the correct method based on the object. This method of selection is called <em>late binding</em>.
 			</p>
 	      	
 	      	<h4>Inheritance</h4>
 	      	<em>Is-a relationship.</em>
 	      	<p>
-	      		Inheritance is a technique of enhancing an existing class. If you need to implement a new class which is more specific to a general concept class then the new class can inherit from the existing class. Example: If we need to define a class 'SavingAccount' to model an account that pays fix interest rate and an a 'FixedDepositAccount' to model an account that pays higher interest rate but the money is locked in for a period then both the classes can inherit from a more genral model 'BankAccount' which can <b>abstract</b> the common code.
+	      		Inheritance is a technique of enhancing an existing class. If you need to implement a new class which is more specific to a general concept class then the new class can inherit from the existing class. Example: If we need to define a class 'SavingAccount' to model an account that pays fix interest rate and a 'FixedDepositAccount' to model an account that pays higher interest rate but the money is locked in for a period then both the classes can inherit from a more general model 'BankAccount' which can <b>abstract</b> the common code.
 	      		<img class="img-responsive" src="./images/blog/oop-concepts-2.png" alt="Figure 3">
 	      		You can download the sample code from <a href="https://github.com/kedarkrishnan/OOP-revisited-java-sample-code" target="_blank"> here</a>.
 	      	</p>
@@ -82,14 +82,14 @@
 			<h5>Dependency</h5>
 			<em>Changing one may affect the other</em>
 	      	<p>
-	      		Relates to collaboration or delegation, where an object requests services from another object and is therefor dependent on that object.
+	      		Relates to collaboration or delegation, where an object requests services from another object and is therefore dependent on that object.
 	      	</p>
 	      	<p>
 	      		To summarize the key concepts of object oriented programming are:
 	      		<ul>
 	      			<li>Encapsulation - <i>Keeping unnecessary details hidden</i></li>
 	      			<li>Abstraction - <i>Keeping things relevant</i></li>
-	      			<li>Polymorphism - <i>Varying behaviour</i></li>
+	      			<li>Polymorphism - <i>Varying behavior</i></li>
 	      			<li>Inheritance - <i>Is-a relationship</i></li>
 	      		</ul>
 	      		Let me know your thoughts below.

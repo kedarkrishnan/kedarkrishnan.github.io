@@ -10,7 +10,7 @@
 		"title" : "Object oriented programming concepts revisited (Java)",
 		"tags"	: "Java",
 		"link"	: "#/blog/oop-concepts",		
-		"summary": "This post is amied to revise the key concepts of Encapsulation, Abstraction, Polymorphism and Inheritance... ",
+		"summary": "This post is aimed to revise the key concepts of Encapsulation, Abstraction, Polymorphism and Inheritance... ",
 		"imageUrl" : "./images/blog/oop-concepts.png"
 	}
 ]
