@@ -98,7 +98,6 @@ function pageConfig(){
 	if($('#recent-list').length){
 		
 		if(!recentBlogs){
-			console.log(recentBlogs)
 			$.getJSON("./data/blog.json",loadRecentList);		
 		}else{
 			loadRecentList(recentBlogs);	
@@ -126,7 +125,6 @@ function loadBlogList(blogs){
 		var tagsDiv = $("<ul/>",{class:"list-unstyled article-type"})
 		var tags = blog.tags.split(",");
 		tags.forEach(function(tag){
-			console.log(tag)
 			tagsDiv.append($("<li/>",{"text":tag}));
 		})
 		cardDetails.append(tagsDiv);
@@ -148,8 +146,7 @@ function loadBlogList(blogs){
 
 function loadRecentList(recentBlogs){
 	var recentBlogsDiv = $("#recent-list");
-	recentBlogs.forEach(function(blog){
-		console.log(blog)
+	recentBlogs.forEach(function(blog){		
 		recentBlogsDiv.append($("<li/>").append($("<a/>",{href:blog.link,text:blog.title})));
 	})	
 }
