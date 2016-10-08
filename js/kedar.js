@@ -29,6 +29,12 @@ $(document).ready(function(){
 			$('.' + filterBy).animate({'opacity':'1'},500)			
 		});			
 	});
+
+	//Navbar 
+	$('.navbar-collapse').on('click','a',function(){
+		console.log("in")
+		$('.navbar-collapse').removeClass('in')
+	})
 })
 
 var recentBlogs;
